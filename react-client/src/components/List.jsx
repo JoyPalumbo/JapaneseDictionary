@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ListItem from './ListItem.jsx';
+import ListWord from './ListWord.jsx';
 
 const List = ({ items }) => (
   <div>
     <h4> List Component </h4>
-    There are { items.length } items.
-    { items.map(item => <ListItem item={item} />)}
+    There are { words.length } words.
+    { items.map(item => <ListWord item={item} />)}
   </div>
 );
 
 List.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
+  words: PropTypes.arrayOf(PropTypes.shape({
 
   })).isRequired,
 };

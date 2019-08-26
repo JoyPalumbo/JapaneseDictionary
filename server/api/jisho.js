@@ -27,4 +27,5 @@ return axios(options, {
 });
 
 
+
 module.exports.getJapaneseWords = getJapaneseWords;

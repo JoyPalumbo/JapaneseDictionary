@@ -4,7 +4,7 @@ CREATE DATABASE english_japanese_dictionary;
 
 USE english_japanese_dictionary;
 
-CREATE TABLE english_japanese_count (
+CREATE TABLE words (
   id int NOT NULL AUTO_INCREMENT,
   english varchar(50) NOT NULL,
   hirigana varchar(50) NOT NULL,
