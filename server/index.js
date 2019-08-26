@@ -10,7 +10,7 @@ const app = express();
 // UNCOMMENT FOR REACT
 app.use(express.static(path.join(__dirname, '../react-client/dist')));
 
-app.post('/words', (req, res) => {
+app.post('/:words', (req, res) => {
   const results = getJapaneseWords(res.params.words);
   console.log('get words');
   results.then((response) => {
