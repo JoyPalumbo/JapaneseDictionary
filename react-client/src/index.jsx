@@ -8,16 +8,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
+      words: [],
     };
-    this.getItems = this.getItems.bind(this);
+    this.getwords = this.getwords.bind(this);
   }
 
   componentDidMount() {
-    this.getItems()
+    this.getwords()
       .then((data) => {
         this.setState({
-          items: data,
+          words: data,
         });
       })
       .catch((err) => {
@@ -25,20 +25,20 @@ class App extends React.Component {
       });
   }
 
-  getItems() {
-    return axios.get('/items')
+  getwords() {
+    return axios.get('/words')
       .then(response => response.data);
   }
 
   render() {
-    const { items } = this.state;
+    const { words } = this.state;
 
     return (
       <div>
         <h1>JLPT N5 dictionary</h1>
         {/* <p> List of searched words</p> */}
         {/* <p> Top 5 words searched</p> */}
-        <List items={items} />
+        <List words={words} />
       </div>
     );
   }

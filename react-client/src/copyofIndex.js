@@ -10,9 +10,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: [],
+      words: [],
     };
-    this.getItems = this.getItems.bind(this);
+    this.getwords = this.getwords.bind(this);
     // this.handleSearch = this.handleSearch.bind(this);
   }
 
@@ -24,7 +24,7 @@ class App extends React.Component {
 //     kanji: {$kanji},
 //   })
 //   .then(function (response){
-//     response.semt("items have saved to database");
+//     response.semt("words have saved to database");
 //     console.log("resposnse");
 //   })
 //   .catch(function (error){
@@ -85,10 +85,10 @@ render() {
 
 
   componentDidMount() {
-    this.getItems()
+    this.getwords()
       .then((data) => {
         this.setState({
-          items: data,
+          words: data,
         });
       })
       .catch((err) => {
@@ -96,18 +96,18 @@ render() {
       });
   }
 
-  getItems() {
-    return axios.get('/items')
+  getwords() {
+    return axios.get('/words')
       .then(response => response.data);
   }
 
   render() {
-    const { items } = this.state;
+    const { words } = this.state;
 
     return (
       <div>
         <h1>Item List</h1>
-        <List items={items} />
+        <List words={words} />
       </div>
     );
   }

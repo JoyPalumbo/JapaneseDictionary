@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 
 import ListWord from './ListWord.jsx';
 
-const List = ({ items }) => (
+const List = ({ words }) => (
   <div>
     <h4> List Component </h4>
     There are { words.length } words.
-    { items.map(item => <ListWord item={item} />)}
+    { words.map(word => <ListWord word={word} />)}
   </div>
 );
 
