@@ -18,27 +18,41 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Heading
   > Name the product in a way the reader (i.e. your target customers) will understand.
+// N5 Japanese Dictionary
 
 ## Sub-Heading
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+//This dictionary is for students studing for the JLPT N5 test.   
 
 ## Summary
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.  
+
+Are you studying for the JLPT N5?  Then this app is for you! If you need to quickly look up a vocabulry word in the list of N5 words, you can enter the English word and you will get back both the hirigana and kanji for that vocabulary word.  Your search results will be stored on the page for you.  Use this app and you will pass your JLPT with flying colors!
+
+ 
 
 ## Problem
   > Describe the problem your product solves.
 
+  This will solve the issue of not knowing the Japanese word you are looking for.
+
 ## Solution
   > Describe how your product elegantly solves the problem.
+  It is fast and simple.  There aren't extra unnecessary things on the page distracting users.  They can get right to what they need to look up vocabulary. 
 
 ## Quote from You
   > A quote from a spokesperson in your company.
+  "Japanese is a fun language to learn and taking the JLPT will help you achieve great success in your language learning process.  We're here to help you in your Japanese language learning journey.  
 
 ## How to Get Started
   > Describe how easy it is to get started.
+  This is the easiert Japanese dictionary app.  Once the page is loaded, just enter the English word you need translated into the search bar and click the submit button.  The Japanese translation will pop up and be added to the list of the other words you have searched. 
 
 ## Customer Quote
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  //"I love the N5 Japanese Dictionary app.  It is so easy to use and I can immediatly find the word I am looking for.  I couldn't have passed the JLPT N5 without this app!"
+
 ## Closing and Call to Action
   > Wrap it up and give pointers where the reader should go next.
+  We hope you enjoy using the N5 Japanese Dictionary and we hope you have great success on your test!  Look out soon, we will be adding a dictionary for N4-N1 soon!  

@@ -6,7 +6,7 @@ const items = require('../database-mysql');
 const app = express();
 
 // UNCOMMENT FOR REACT
-// app.use(express.static(path.join(__dirname, '../react-client/dist')));
+app.use(express.static(path.join(__dirname, '../react-client/dist')));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(path.join(__dirname, '../angular-client')));
