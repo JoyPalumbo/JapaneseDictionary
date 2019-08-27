@@ -9,8 +9,9 @@ const ListWord = ({ word }) => (
   </div>
 );
 
+//not sure what .shape is
 ListWord.propTypes = {
-  item: PropTypes.shape({
+  word: PropTypes.shape({
 
   }).isRequired,
 };

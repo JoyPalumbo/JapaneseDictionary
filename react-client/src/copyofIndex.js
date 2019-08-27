@@ -106,7 +106,7 @@ render() {
 
     return (
       <div>
-        <h1>Item List</h1>
+        <h1>Word List</h1>
         <List words={words} />
       </div>
     );

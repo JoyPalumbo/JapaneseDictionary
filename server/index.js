@@ -32,11 +32,15 @@ app.get('/words', (req, res) => {
   words.selectAll((err, data) => {
     if (err) {
       res.sendStatus(500);
+      console.log("I'ma loser");
     } else {
       res.json(data);
+      console.log('it worked!');
     }
   });
 });
+
+
 
 app.listen(3000, () => {
   console.log('listening on port 3000!');
