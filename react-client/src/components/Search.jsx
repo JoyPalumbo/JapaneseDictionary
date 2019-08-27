@@ -5,9 +5,9 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      username: '',
-    };
+    // this.state = {
+    //   word: '',
+    // };
     
   this.handleChange = this.handleChange.bind(this);
   this.handleClick = this.handleClick.bind(this);
@@ -15,25 +15,25 @@ class Search extends React.Component {
 
   handleChange(e) {
     this.setState({
-      username: e.target.value,
+      word: e.target.value,
     });
   }
 
   handleClick() {
     const { onSearch } = this.props;
-    const { username } = this.state;
+    const { word } = this.state;
 
-    onSearch(username);
+    onSearch(word);
   }
 
   render() {
-    const { username } = this.state;
+    const { word } = this.state;
 
     return (
       <div>
-        <h4>Add more repos!</h4>
-        Enter a github username: <input value={username} onChange={this.handleChange} />
-        <button onClick={this.handleClick} type="button">Add Repos</button>
+        <h4>Get Japanese Word</h4>
+        Enter an English word: <input value={ word } onChange={this.handleChange} />
+        <button onClick={this.handleClick} type="button">Submit</button>
       </div>
     );
   }
