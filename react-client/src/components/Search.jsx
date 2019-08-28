@@ -27,7 +27,7 @@ class Search extends React.Component {
   }
 
   render() {
-     const { word } = this.state;
+    const { word } = this.state;
     //  console.log(word);
 
     return (

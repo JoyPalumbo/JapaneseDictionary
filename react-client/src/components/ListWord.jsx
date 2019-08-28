@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const ListWord = ({ word }) => (
@@ -8,6 +8,8 @@ const ListWord = ({ word }) => (
     { word.kanji }
   </div>
 );
+
+
 
 //not sure what .shape is
 ListWord.propTypes = {

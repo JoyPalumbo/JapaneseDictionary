@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-import List from './components/List.jsx';
+// import List from './components/List.jsx';
+// import WordList from './components/WordList.jsx';
 import Search from './components/Search.jsx';
 
 class App extends React.Component {
@@ -12,23 +13,35 @@ class App extends React.Component {
       word: '',
     };
     // this.getwords = this.getwords.bind(this);
-     this.handleSearch = this.handleSearch.bind(this);
-      // this.handleClick = this.handleClick.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   handleSearch(word) {
+    console.log("testing");
     console.log('word was searched:', word);
     // console.log("State word", this.state.word);
     axios.post('/word', { english: word })
       .then((response) => {
         // response.send('words have saved to database');
-
+        this.state.word = response;
         console.log('response from front', response.data);
       })
       .catch((error) => {
         // .status(400).send('unable to save to database');
         console.log(error);
       }); 
+
+      axios.get('/top')
+      .then((response) => {
+        // response.send('words have saved to database');
+        console.log('response from front', response.data);
+      })
+      .catch((error) => {
+        // .status(400).send('unable to save to database');
+        console.log(error);
+      });
+
   }
 
   // getwords() {
@@ -37,7 +50,7 @@ class App extends React.Component {
   // }
 
   render() {
-     const { word } = this.state;
+    const { word } = this.state;
     // const { english } = this.state;
 
     return (
@@ -45,7 +58,8 @@ class App extends React.Component {
        <h1>Jisho Dictionary</h1>
        <h1>日本語の事象</h1>
        
-      {/* <WordList repos={words} /> */}
+      {/* <WordList repos={ this.state.word } />
+      <List words={ this.state.word } /> */}
       <Search onSearch={this.handleSearch} />
      </div>
     )
