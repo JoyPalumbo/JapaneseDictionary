@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const jisho = require('../server/api/jisho')
+const jisho = require('../server/api/jisho');
 
 const connection = mysql.createConnection({
   host: 'localhost',

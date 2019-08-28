@@ -31,7 +31,7 @@ const app = express();
 
 // UNCOMMENT FOR REACT
 app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../react-client/dist')));
 //if you're getting indefined fromclient search/post requests it may be due
 //to a lack of json parsing

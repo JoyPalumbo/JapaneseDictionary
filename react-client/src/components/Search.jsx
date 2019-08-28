@@ -5,17 +5,17 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.state = {
-    //   word: '',
-    // };
+    this.state = {
+      word: '',
+    };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange(e) {
+  handleChange(event) {
     this.setState({
-      word: e.target.value,
+      word: event.target.value,
     });
   }
 
@@ -27,12 +27,14 @@ class Search extends React.Component {
   }
 
   render() {
-    const { word } = this.state;
+     const { word } = this.state;
+    //  console.log(word);
 
     return (
       <div>
-        <h4>Get Japanese Word</h4>
-        Enter an English word: <input value={word} onChange={this.handleChange} />
+        <h4>Get Your N5 Japanese Word</h4>
+        <h4> Look at my cute but non-functiong website</h4>
+        Enter an English word: <input value={ word } onChange={this.handleChange} />
         <button onClick={this.handleClick} type="button">Submit</button>
       </div>
     );
