@@ -8,15 +8,13 @@ const connection = mysql.createConnection({
   database: 'english_japanese_dictionary',
 });
 
-const getTopData = () => {
-  connection.query(' select * from words order by id desc limit 5', (err, words) => {
+const getTopData = (callback) => {
+  connection.query('select * from words order by id desc limit 5', (err, words) => {
     if (err) {
-      throw err;
+      callback(err);
     } else {
-      console.log('できた!');
-      console.log(words);
+      callback(null, words);
     }
-    return words;
   });
 };  
 

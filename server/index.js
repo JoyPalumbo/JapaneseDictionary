@@ -105,13 +105,13 @@ app.post('/word', (req, res) => {
 });
 
 app.get('/top', (req, res) => {
-  words.getTopData((err, data) => {
+  words.getTopData((err, words) => {
     if (err) {
+      console.log('Error getting words', err);
       res.sendStatus(500);
-      console.log("I'ma loser");
     } else {
-      res.json(data);
-      console.log('it worked!');
+      console.log('words from db:', words);
+      res.json(words);
     }
   });
 });

@@ -32,8 +32,8 @@ class Search extends React.Component {
 
     return (
       <div>
-        <h4>Get Your N5 Japanese Word</h4>
-        <h4> Look at my cute but non-functiong website</h4>
+        
+        <h3> This is my page it's but non-functiong website, yay</h3>
         Enter an English word: <input value={ word } onChange={this.handleChange} />
         <button onClick={this.handleClick} type="button">Submit</button>
       </div>

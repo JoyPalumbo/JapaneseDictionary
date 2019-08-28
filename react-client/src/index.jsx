@@ -15,15 +15,14 @@ class App extends React.Component {
     this.state = {
       word: '',
       hiragana: '',
-      kanji: ''
+      kanji: '',
+      words: [],
     };
     // this.getwords = this.getwords.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     // this.handleClick = this.handleClick.bind(this);
   }
 
-
-  
   handleSearch(word) {
     console.log("testing");
     console.log('word was searched:', word);
@@ -47,6 +46,8 @@ class App extends React.Component {
 
       axios.get('/top')
       .then((response) => {
+        const words = response.data;
+        this.setState({ words: words });
         console.log('response from front', response.data);
       })
       .catch((error) => {
@@ -61,7 +62,7 @@ class App extends React.Component {
   // }
 
   render() {
-    const { word, hiragana, kanji } = this.state;
+    const { word, hiragana, kanji, words } = this.state;
     // const { english } = this.state;
 
     return (
@@ -69,7 +70,7 @@ class App extends React.Component {
         <h1>Japanese Dictionary</h1>
         <h1>日本語の事象</h1>
        
-       {/* <ListWord /> */}
+        <ListWord words={words} />
        {/* <English english={this.state.word} />
        <Hiragana hiragana={this.state.hiragana}/>
        <Kanji kanji={this.state.kanji}/> */}

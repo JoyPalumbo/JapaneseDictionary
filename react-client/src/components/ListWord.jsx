@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+function ListWord(props) {
+  // props.words
+  // const words = [
+  //   { eng: 'cat', kanji: 'siiudfhsdjf', hiragana: 'piodu' },
+  //   { eng: 'dog', kanji: 'sdsfsdfdfhsdjf', hiragana: 'sdfpiodu' },
+  //   { eng: 'horse', kanji: 'sdsfsdfdfhsdjf', hiragana: 'sdfpiodu' },
+  // ];
 
-// mysql.connection.connect((err) => {
-//   if (err) throw err;
-//   mysql.connection.query('SELECT * FROM words', (err, result, fields) => {
-//     if (err) throw err;
-//     console.log("I am in my listWord", result);
-  
-//   });
-// });
-// function ListWord ({ name }) => (
-function ListWord() {
-  // console.log(word);
-  // const names = ["bob", "joe", "tim"];
   return (
     <div>
       <h2>Previous searched words</h2>
-      <h2>English: dog, Japanese: 犬(いぬ)</h2>
-      <h2>English: cat, Japanese: ねこ</h2>
-      {/* { word.english }
-    { word.hiragana }
-    { word.kanji } */}
+      {props.words.map((word) => {
+        return (
+          <div>
+            <h2>{word.english}</h2>
+            <h2>{word.kanji}</h2>
+            <h2>{word.hirigana}</h2>
+          </div>
+        );
+      })}
+      {/* <h2>English: dog, Japanese: 犬(いぬ)</h2>
+      <h2>English: cat, Japanese: ねこ</h2> */}
     </div>
   );
 }
