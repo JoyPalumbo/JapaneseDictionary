@@ -33,7 +33,6 @@ class Search extends React.Component {
     return (
       <div>
         
-        <h3> This is my page it's but non-functiong website, yay</h3>
         Enter an English word: <input value={ word } onChange={this.handleChange} />
         <button onClick={this.handleClick} type="button">Submit</button>
       </div>
