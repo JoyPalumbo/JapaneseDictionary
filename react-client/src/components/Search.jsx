@@ -8,9 +8,9 @@ class Search extends React.Component {
     // this.state = {
     //   word: '',
     // };
-    
-  this.handleChange = this.handleChange.bind(this);
-  this.handleClick = this.handleClick.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(e) {
@@ -32,7 +32,7 @@ class Search extends React.Component {
     return (
       <div>
         <h4>Get Japanese Word</h4>
-        Enter an English word: <input value={ word } onChange={this.handleChange} />
+        Enter an English word: <input value={word} onChange={this.handleChange} />
         <button onClick={this.handleClick} type="button">Submit</button>
       </div>
     );
